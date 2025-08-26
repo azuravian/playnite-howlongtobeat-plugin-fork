@@ -1,4 +1,3 @@
 [submodule "source/playnite-plugincommon"]
 	path = source/playnite-plugincommon
 	url = https://github.com/azuravian/playnite-plugincommon.git
-	branch = master
