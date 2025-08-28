@@ -673,7 +673,7 @@ namespace HowLongToBeat.Services
                         {
                             editData.Lists.Playing = true;
                         }
-                        else if (!editData.Lists.Backlog && !editData.Lists.Completed && !editData.Lists.Custom && !editData.Lists.Playing && !editData.Lists.Replay && !editData.Lists.Retired)
+                        else if (!editData.Lists.Backlog && !editData.Lists.Completed && !isCompleted && !editData.Lists.Custom && !editData.Lists.Playing && !editData.Lists.Replay && !editData.Lists.Retired )
                         {
                             editData.Lists.Playing = true;
                         }
