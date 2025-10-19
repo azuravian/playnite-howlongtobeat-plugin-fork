@@ -62,7 +62,6 @@ namespace HowLongToBeat.Services
 
         private static string UrlPostData => UrlBase + "/api/submit";
         private static string UrlPostDataEdit => UrlBase + "/submit/edit/{0}";
-
         private static string SearchEndPoint => "/api/locate";
         private static string UrlSearch => UrlBase + SearchEndPoint;
 
@@ -232,7 +231,11 @@ namespace HowLongToBeat.Services
                 {
                     url += $"/_next/static/chunks/pages/{js}";
                     response = await Web.DownloadStringData(url);
+<<<<<<< HEAD
                     Match matches = Regex.Match(response, $"\"{SearchEndPoint}/\".concat[(]\"(\\w*)\"[)].concat[(]\"(\\w*)\"[)]");
+=======
+                    Match matches = Regex.Match(response, "\"/api/locate/\".concat[(]\"(\\w*)\"[)].concat[(]\"(\\w*)\"[)]");
+>>>>>>> 1fd2d3e (Fix API url change)
                     SearchId = matches.Groups[1].Value + matches.Groups[2].Value;
                 }
             }
