@@ -1,4 +1,4 @@
-﻿using CommonPluginsShared;
+using CommonPluginsShared;
 using CommonPluginsShared.Extensions;
 using FuzzySharp;
 using HowLongToBeat.Models;
@@ -257,7 +257,7 @@ namespace HowLongToBeat.Services
 
         private static string SearchUrl { get; set; } = null;
         private static readonly object SearchUrlLock = new object();
-        private const int ScriptDownloadTimeoutMs = 5000;
+        private const int ScriptDownloadTimeoutMs = 120000;
 
         private const int MaxParallelGameDataDownloads = 32;
         private const int GameDataDownloadTimeoutMs = 15000;
@@ -956,7 +956,6 @@ namespace HowLongToBeat.Services
         /// <returns>The search endpoint URL.</returns>
         private async Task<string> GetSearchUrl()
         {
-            return "/api/find";
             if (!SearchUrl.IsNullOrEmpty() && !SearchUrl.Contains("error"))
             {
                 return SearchUrl;
